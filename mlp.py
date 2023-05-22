@@ -56,7 +56,7 @@ class MLP:
             if self.f == 'sigmoid':
                 dY = Yh[k - 1] * (1 - Yh[k - 1]) # Derivative of sigmoid
             else:
-                dY = 1 - np.squared(Yh[k - 1]) # Derivative of tanh
+                dY = 1 - np.square(Yh[k - 1]) # Derivative of tanh
             D[k - 1] = self._sub_bias(E * dY)
         return deltaW
 
